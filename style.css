@@ -1,5 +1,7 @@
 body {
-    background-color: lightskyblue;
+    background-image: url(sand.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
@@ -22,7 +24,7 @@ h2 {
     width: 500px;
     margin: auto;
     text-align: center;
-    line-height: 500px;
+    line-height: 630px;
     font-family: "Nosifer", cursive;
     color: red;
     font-size: 50px;
@@ -30,4 +32,16 @@ h2 {
     background-size: 75% 75%;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.btn {
+    background-color: black;
+    color:white;
+    font-family: "Sigmar One", cursive;
+    font-size: 20px;
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
 }
