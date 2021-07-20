@@ -1,9 +1,15 @@
 class Cactus {
-    constructor(name, age) {
+    constructor(name, age, hungerLevel, boredomLevel, tirednessLevel) {
         this.name = name;
         this.age = age;
+        this.hungerLevel = hungerLevel;
+        this.boredomLevel = boredomLevel;
+        this.tirednessLevel = tirednessLevel;
     }
 }
+
+const myCactus = new Cactus("Spike", 0, 1, 1, 1);
+console.log(myCactus);
 
 const foodEl = document.getElementById("food");
 const playEl = document.getElementById("play");

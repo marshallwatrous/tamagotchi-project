@@ -18,6 +18,10 @@ h2 {
     font-family: "Permanent Marker", cursive;
 }
 
+h3 {
+    text-align: center;
+}
+
 #game-screen {
     background-color: yellow;
     height: 500px;
@@ -43,5 +47,9 @@ h2 {
 }
 
 .buttons {
+    text-align: center;
+}
+
+.input {
     text-align: center;
 }
