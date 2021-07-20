@@ -1,13 +1,15 @@
 h1 {
     color: green;
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
+    font-family: "Sigmar One", cursive;
 }
 
 h2 {
     color: blue;
     font-size: 25px;
     text-align: center;
+    font-family: "Permanent Marker", cursive;
 }
 
 #game-screen {
