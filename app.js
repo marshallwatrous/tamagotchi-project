@@ -9,7 +9,7 @@ sleepEl.addEventListener("click", putPetToSleep);
 let hungerLevel = 0;
 let boredomLevel = 0;
 let tirednessLevel = 0;
-let petAlive = "alive";
+let petAlive = "dead";
 
 
 function feedPet() {
