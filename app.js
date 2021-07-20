@@ -9,6 +9,7 @@ sleepEl.addEventListener("click", putPetToSleep);
 let hungerLevel = 0;
 let boredomLevel = 0;
 let tirednessLevel = 0;
+let petAlive = "alive";
 
 
 function feedPet() {
@@ -23,3 +24,13 @@ function putPetToSleep() {
     tirednessLevel = 0;
 }
 
+
+if (hungerLevel >= 10 || boredomLevel >= 10 || tirednessLevel >= 10){
+    petAlive = "dead";
+}
+
+const divEl = document.getElementById("game-screen");
+
+if (petAlive === "dead") {
+    divEl.textContent = "Game Over";
+}
