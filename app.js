@@ -1,3 +1,10 @@
+class Cactus {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
 const foodEl = document.getElementById("food");
 const playEl = document.getElementById("play");
 const sleepEl = document.getElementById("sleep");
@@ -6,10 +13,10 @@ foodEl.addEventListener("click", feedPet);
 playEl.addEventListener("click", playWithPet);
 sleepEl.addEventListener("click", putPetToSleep);
 
-let hungerLevel = 0;
-let boredomLevel = 0;
-let tirednessLevel = 0;
-let petAlive = "dead";
+let hungerLevel = 1;
+let boredomLevel = 1;
+let tirednessLevel = 1;
+let petAlive = "alive";
 
 
 function feedPet() {
