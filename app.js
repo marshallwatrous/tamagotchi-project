@@ -10,13 +10,13 @@ const boredomEl = document.getElementById("boredom");
 const tirednessEl = document.getElementById("tiredness");
 
 function addLevels() {
-    hungerLevel++;
-    boredomLevel++;
-    tirednessLevel++;
+    myCactus.hungerLevel++;
+    myCactus.boredomLevel++;
+    myCactus.tirednessLevel++;
 
-    hungerEl.textContent = "Hunger: " + hungerLevel;
-    boredomEl.textContent = "Boredom: " + boredomLevel;
-    tirednessEl.textContent = "Tiredness: " + tirednessLevel;
+    hungerEl.textContent = "Hunger: " + myCactus.hungerLevel;
+    boredomEl.textContent = "Boredom: " + myCactus.boredomLevel;
+    tirednessEl.textContent = "Tiredness: " + myCactus.tirednessLevel;
 }
 
 
@@ -42,7 +42,7 @@ function nameInput() {
 
 function startGame() {
     myCactus = new Cactus(input, 0, 1, 1, 1);
-    setInterval(addLevels, 1000);
+    const interval = setInterval(addLevels, 1000);
     console.log(myCactus);
 }
 
@@ -72,7 +72,7 @@ function putPetToSleep() {
 }
 
 
-if (hungerLevel >= 10 || boredomLevel >= 10 || tirednessLevel >= 10){
+if (myCactus.hungerLevel >= 10 || myCactus.boredomLevel >= 10 || myCactus.tirednessLevel >= 10){
     petAlive = "dead";
 }
 
@@ -80,8 +80,12 @@ const divEl = document.getElementById("game-screen");
 
 if (petAlive === "dead") {
     divEl.textContent = "Game Over";
-    hungerLevel = 1;
-    boredomLevel = 1;
-    tirednessLevel = 1;
+    clearInterval(interval);
+    myCactus.hungerLevel = 1;
+    myCactus.boredomLevel = 1;
+    myCactus.tirednessLevel = 1;
+    foodEl.textContent = "Hunger: " + 1;
+    playEl.textContent = "Boredom: " + 1;
+    sleepEl.textContent = "Tiredness: " + 1;
 }
 
