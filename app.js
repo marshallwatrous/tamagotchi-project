@@ -8,6 +8,14 @@ class Cactus {
     }
 }
 
+function nameInput() {
+    let input = document.getElementById("userInput").nodeValue;
+    alert(input);
+    console.log(input);
+}
+
+
+
 const myCactus = new Cactus("Spike", 0, 1, 1, 1);
 console.log(myCactus);
 
