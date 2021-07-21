@@ -3,6 +3,9 @@ let boredomLevel = 1;
 let tirednessLevel = 1;
 let petAlive = "alive";
 
+const hungerEl = document.getElementById("hunger");
+const boredomEl = document.getElementById("boredom");
+const tirednessEl = document.getElementById("tiredness");
 
 function addLevels() {
     hungerLevel++;
@@ -14,9 +17,7 @@ function addLevels() {
     tirednessEl.textContent = "Tiredness: " + tirednessLevel;
 }
 
-setInterval(addLevels() {
-    
-}, 300000);
+setInterval(addLevels(), 300000);
 
 
 
@@ -50,15 +51,15 @@ playEl.addEventListener("click", playWithPet);
 sleepEl.addEventListener("click", putPetToSleep);
 
 function feedPet() {
-    hungerLevel = 0;
+    hungerLevel--;
 }
 
 function playWithPet() {
-    boredomLevel = 0;
+    boredomLevel--;
 }
 
 function putPetToSleep() {
-    tirednessLevel = 0;
+    tirednessLevel--;
 }
 
 
