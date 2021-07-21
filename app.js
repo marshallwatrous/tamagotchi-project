@@ -74,18 +74,15 @@ function putPetToSleep() {
 
 if (myCactus.hungerLevel >= 10 || myCactus.boredomLevel >= 10 || myCactus.tirednessLevel >= 10){
     petAlive = "dead";
-}
-
-const divEl = document.getElementById("game-screen");
-
-if (petAlive === "dead") {
+    const divEl = document.getElementById("game-screen");
     divEl.textContent = "Game Over";
     clearInterval(interval);
-    myCactus.hungerLevel = 1;
-    myCactus.boredomLevel = 1;
-    myCactus.tirednessLevel = 1;
     foodEl.textContent = "Hunger: " + 1;
     playEl.textContent = "Boredom: " + 1;
     sleepEl.textContent = "Tiredness: " + 1;
+    new Cactus(input, 0, 1, 1, 1);
 }
+
+
+
 
