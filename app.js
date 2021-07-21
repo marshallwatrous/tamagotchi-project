@@ -1,3 +1,25 @@
+let hungerLevel = 1;
+let boredomLevel = 1;
+let tirednessLevel = 1;
+let petAlive = "alive";
+let interval = null;
+
+function addLevels() {
+    hungerLevel++;
+    boredomLevel++;
+    tirednessLevel++;
+
+    hungerEl.textContent = "Hunger: " + hungerLevel;
+    boredomEl.textContent = "Boredom: " + boredomLevel;
+    tirednessEl.textContent = "Tiredness: " + tirednessLevel;
+}
+
+interval = setInterval(addLevels() {
+    
+}, 300000);
+
+
+
 class Cactus {
     constructor(name, age, hungerLevel, boredomLevel, tirednessLevel) {
         this.name = name;
@@ -26,12 +48,6 @@ const sleepEl = document.getElementById("sleep");
 foodEl.addEventListener("click", feedPet);
 playEl.addEventListener("click", playWithPet);
 sleepEl.addEventListener("click", putPetToSleep);
-
-let hungerLevel = 1;
-let boredomLevel = 1;
-let tirednessLevel = 1;
-let petAlive = "alive";
-
 
 function feedPet() {
     hungerLevel = 0;
