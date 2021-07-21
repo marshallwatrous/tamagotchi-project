@@ -22,6 +22,10 @@ h3 {
     text-align: center;
 }
 
+.levels {
+    text-align: center;
+}
+
 #game-screen {
     background-color: yellow;
     height: 500px;

@@ -2,7 +2,7 @@ let hungerLevel = 1;
 let boredomLevel = 1;
 let tirednessLevel = 1;
 let petAlive = "alive";
-let interval = null;
+
 
 function addLevels() {
     hungerLevel++;
@@ -14,7 +14,7 @@ function addLevels() {
     tirednessEl.textContent = "Tiredness: " + tirednessLevel;
 }
 
-interval = setInterval(addLevels() {
+setInterval(addLevels() {
     
 }, 300000);
 
@@ -70,4 +70,8 @@ const divEl = document.getElementById("game-screen");
 
 if (petAlive === "dead") {
     divEl.textContent = "Game Over";
+    hungerLevel = 1;
+    boredomLevel = 1;
+    tirednessLevel = 1;
 }
+
