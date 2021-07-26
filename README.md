@@ -1,6 +1,6 @@
 Wireframe:
 
-
+![wireframe](./img/wireframe.png)
 
 User Stories:
 

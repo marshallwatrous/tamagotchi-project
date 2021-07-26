@@ -1,10 +1,12 @@
-let hungerLevel = 1;
-let boredomLevel = 1;
-let tirednessLevel = 1;
 let petAlive = "alive";
 let input = "";
 let interval = null;
 let age = 0;
+
+const foodEl = document.getElementById("food");
+const playEl = document.getElementById("play");
+const sleepEl = document.getElementById("sleep");
+const startEl = document.getElementById("start-button");
 
 const ageEl = document.getElementById("age");
 const hungerEl = document.getElementById("hunger");
@@ -61,21 +63,13 @@ function nameInput() {
 
 function startGame() {
     myCactus = new Cactus(input, 0, 1, 1, 1);
+    const screenEl = document.getElementById("game-screen");
+    screenEl.textContent = "";
     interval = setInterval(addLevels, 1000);
     interval2 = setInterval(agePet, 1000);
     console.log(myCactus);
     
 }
-
-const foodEl = document.getElementById("food");
-const playEl = document.getElementById("play");
-const sleepEl = document.getElementById("sleep");
-const startEl = document.getElementById("start-button");
-
-foodEl.addEventListener("click", feedPet);
-playEl.addEventListener("click", playWithPet);
-sleepEl.addEventListener("click", putPetToSleep);
-startEl.addEventListener("click", nameInput);
 
 function feedPet() {
     if (myCactus.hungerLevel > 0) {
@@ -94,3 +88,8 @@ function putPetToSleep() {
         myCactus.tirednessLevel--;
     }
 }
+
+foodEl.addEventListener("click", feedPet);
+playEl.addEventListener("click", playWithPet);
+sleepEl.addEventListener("click", putPetToSleep);
+startEl.addEventListener("click", nameInput);
