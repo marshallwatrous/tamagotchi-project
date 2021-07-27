@@ -30,9 +30,9 @@ function addLevels() {
         clearInterval(interval);
         clearInterval(interval2);
         ageEl.textContent = "Age: " + 0;
-        foodEl.textContent = "Hunger: " + 1;
-        playEl.textContent = "Boredom: " + 1;
-        sleepEl.textContent = "Tiredness: " + 1;
+        hungerEl.textContent = "Hunger: " + 1;
+        boredomEl.textContent = "Boredom: " + 1;
+        tirednessEl.textContent = "Tiredness: " + 1;
         new Cactus(input, 0, 1, 1, 1);
     }
 }
